@@ -1,0 +1,10 @@
+fastapi[all]
+uvicorn[standard]
+pydantic
+requests
+
+# Memoria vectorial
+chromadb
+
+# Para cargar variables de entorno (si luego usas .env)
+python-dotenv
