@@ -1,4 +1,5 @@
-from fastapi import APIRouter, Depends
+import logging
+from fastapi import APIRouter, Depends, logger
 from app.models.message import Message, ChatResponse
 from app.services.chatbot_service import ChatbotService
 
@@ -13,6 +14,7 @@ async def chat_with_bot(
     payload: Message,
     chat_service: ChatbotService = Depends(get_chat_service)
 ):
+    print("Received message:", payload.message),  # Debug
     response = await chat_service.generate_answer(
         user_id=payload.user_id,
         query=payload.message

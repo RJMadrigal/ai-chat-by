@@ -18,7 +18,7 @@ class ChatbotService:
 
         User query: {query}
         """
-
+        print("Using model:", self.model),  # Debug
         response = ollama.chat(
             model=self.model,
             messages=[{"role": "user", "content": prompt}]

@@ -8,3 +8,4 @@ chromadb
 
 # Para cargar variables de entorno (si luego usas .env)
 python-dotenv
+mistralai>=1.0.0
